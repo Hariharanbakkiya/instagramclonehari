@@ -1,0 +1,619 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    padding-bottom: 60px;
+}
+/* --- SIDEBAR NAVIGATION (Desktop) --- */
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    /* box-shadow:0px -1px 2px #a8a8a8; */
+    /* border-right: 1px solid #262626; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 24px 12px 20px 12px;
+    z-index: 1000;
+    background-color: #ffffff;
+    color: black;
+}
+
+.logo-container {
+    padding: 12px 12px 30px 12px;
+}
+
+.brand-logo {
+    color: #000000;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    gap:15px;
+    align-items: center;
+}
+
+.logo-icon {
+    display: none;
+    font-size: 24px;
+}
+
+.logo-text {
+    font-family: 'Grand Hotel', cursive, sans-serif;
+    font-size: 26px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    color: #000000;
+    text-decoration: none;
+    font-size:16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar:hover{
+    width:200px;
+    transition-duration:0.1s;
+}
+.nav-item:hover {
+    background-color:rgba(189, 187, 187, 0.3);
+}
+
+.nav-item i {
+    font-size: 24px;
+    width: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.nav-item.active {
+    font-weight: bold;
+}
+
+.profile-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* --- MOBILE TOP HEADER & BOTTOM NAV --- */
+.mobile-header, .mobile-bottom-nav {
+    display: none;
+}
+
+.profile-container {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+}
+
+/* Header Layout */
+.profile-header {
+    display: flex;
+    margin-bottom: 44px;
+}
+
+.profile-avatar-container {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-right: 30px;
+}
+
+.avatar-ring {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.note-badge {
+    position: absolute;
+    top: -10px;
+    left: 25%;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-info {
+    flex-grow: 2;
+    flex-basis: 0;
+}
+
+.username-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.username {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.bio-section {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.full-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.bio-link {
+    color: #00376b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 44px;
+}
+
+.btn {
+    flex: 1;
+    background-color: #efefef;
+    border: none;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #dbdbdb;
+}
+
+/* Highlights styling */
+.highlights-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    scrollbar-width: none;
+}
+
+.highlight-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.highlight-img-wrap, .highlight-img-wrap-empty, .highlight-img-wrap-black {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    padding: 3px;
+    margin-bottom: 8px;
+}
+
+.highlight-img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.highlight-img-wrap-empty {
+    background-color: #efefef;
+}
+
+.highlight-img-wrap-black {
+    background-color: #000;
+}
+
+/* Navigation Tabs */
+.profile-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 4px;
+}
+
+.tab {
+    padding: 12px 0;
+    cursor: pointer;
+    color: #8e8e8e;
+    font-size: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.tab.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* Posts Layout */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.post-square {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    background-color: #efefef;
+}
+
+.post-square img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message-widget{
+position:fixed;
+bottom:20px;
+right:35px;
+background:white;
+padding:14px 22px;
+border-radius:50px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.message-left{
+display:flex;
+align-items:center;
+gap:10px;
+position:relative;
+}
+
+.badge{
+width:20px;
+height:20px;
+border-radius:50%;
+background:red;
+color:white;
+font-size:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+position:absolute;
+left:12px;
+top:10px;
+}
+.message-widget a{
+text-decoration: none;
+color: black;
+}
+.avatars{
+display:flex;
+}
+
+.avatars img{
+width:30px;
+height:30px;
+border-radius:50%;
+margin-left:-8px;
+border:2px solid white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+/* ==========================================================================
+   STRICT BREAKPOINT MEDIA QUERIES (XS, S, MD, LG, XL, XXL)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   [XS] Extra Small Screens (Phone Portrait: up to 575px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+    /* Layout Elements */
+    .sidebar {
+        display: none !important; /* Completely hidden */
+    }
+    
+    .main-dashboard {
+        grid-template-columns: 1fr; /* Force single column */
+    }
+    .sidebar {
+    display: none;
+  }
+
+  .mobile-header, .mobile-bottom-nav {
+    display: flex;
+  }
+   .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 26px;
+        border-bottom: 1px solid #262626;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height:50px;
+        background-color: #000;
+        z-index: 1000;
+        color: white;
+        /* opacity: 0.0; */
+    }
+
+    .header-icons {
+        display: flex;
+        gap: 18px;
+        font-size: 20px;
+    }
+     .notes-wrapper{
+        width: 90%;
+        height: 150px;
+     }
+    /* .main-container {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 70px;
+    } */
+
+    .mobile-bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #000;
+        border-top: 1px solid #262626;
+        z-index: 1000;
+    }
+
+    .mobile-nav-item {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .mobile-profile-thumb {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+    /* Mobile Top/Bottom Bars Visibility */
+    .mobile-header,
+    .bottom-nav {
+        display: flex !important;
+    }
+
+    /* Core Profile Modifications */
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .profile-avatar-container {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .note-badge {
+        left: 55%;
+        top: -5px;
+    }
+
+    .username-row,
+    .stats-row {
+        justify-content: center;
+    }
+
+    .stats-row {
+        gap: 20px;
+        font-size: 14px;
+    }
+    
+    .right-column {
+        padding: 8px !important; /* Tight spacing balance */
+    }
+}
+
+/* --------------------------------------------------------------------------
+   [S] Small Screens (Phone Landscape / Small Tablets: 576px to 767px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .sidebar {
+        width:60px; /* Minimalist icon-only bar */
+        display: flex;
+    }
+    .profile-container{
+        width: 95%;
+        margin: auto;
+    }
+    .main-dashboard {
+        grid-template-columns: 1fr; /* Stays single column */
+    }
+
+    .mobile-header,
+    .bottom-nav {
+        display: none !important; /* Hide mobile-only chrome */
+    }
+
+    .profile-header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .right-column {
+        padding: 16px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   [MD] Medium Screens (Tablets: 768px to 991px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .sidebar {
+        width: 60px; /* Compact width */
+        display: flex;
+    }
+    .profile-container{
+        width: 95%;
+        margin: auto;
+    }
+
+    .main-dashboard {
+        grid-template-columns: 1fr; /* Final single column boundary */
+    }
+
+    .mobile-header,
+    .bottom-nav {
+        display: none !important;
+    }
+    
+    .right-column {
+        padding: 24px !important; /* Medium breathing room */
+    }
+}
+
+/* --------------------------------------------------------------------------
+   [LG] Large Screens (Laptops/Desktops: 992px to 1199px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .sidebar {
+        width:60px; /* Expands to structural text layout */
+        display: flex;
+    }
+
+    .main-dashboard {
+        grid-template-columns: 2fr 1fr; /* Transitions to dual column layout */
+    }
+    
+    .profile-container{
+        width: 95%;
+        margin: auto;
+    }
+    .mobile-header,
+    .bottom-nav {
+        display: none !important;
+    }
+    
+    .right-column {
+        padding: 32px !important; /* Relaxed layout padding */
+    }
+}
+
+/* --------------------------------------------------------------------------
+   [XL] Extra Large Screens (Large Desktops: 1200px to 1399px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .sidebar {
+        width:60px; /* Default wide navigation profile */
+        display: flex;
+    }
+    .profile-container{
+        width: 95%;
+        margin: auto;
+    }
+    .main-dashboard {
+        grid-template-columns: 2fr 1fr; /* Steady double column */
+    }
+
+    .mobile-header,
+    .bottom-nav {
+        display: none !important;
+    }
+    
+    .right-column {
+        padding: 40px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   [XXL] Ultra Wide Screens (Massive Display Panels: 1400px and up)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+    .sidebar {
+        width:60px; /* Progressively expanded full-width display */
+        display: flex;
+    }
+
+    .main-dashboard {
+        grid-template-columns: 3fr 1fr; /* Maximum screen estate split */
+    }
+    
+    .profile-container{
+        width: 95%;
+        margin: auto;
+    }
+    .mobile-header,
+    .bottom-nav {
+        display: none !important;
+    }
+    
+    .right-column {
+        padding: 48px !important; /* Spaciously balanced frame */
+    }
+}

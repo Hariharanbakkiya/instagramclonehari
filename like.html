@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+
+    <!-- <link rel="icon" type="image/png" sizes="39x39" href="instagram-icon.png"> -->
+    <link rel="shortcut icon" href="./instagram-icon.png.png">
+    <link rel="stylesheet" href="./like.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+</head>
+<body>
+     <!-- Sidebar Navigation (Desktop & Tablet) -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <a href="#" class="brand-logo">
+                <i class="fa-brands fa-instagram logo-icon"></i>
+                <span class="logo-text">Instagram</span>
+            </a>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="./index.html" class="nav-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="./reel.html" class="nav-item">
+                <i class="fa-regular fa-square-caret-right" style="background-color: white; color: black;"></i>
+                <span>Reels</span>
+            </a>
+            <a href="./like.html" class="nav-item">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Messages</span>
+            </a>
+            <a href="./girdreel.html" class="nav-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
+            </a>
+            
+            
+            <a href="#" class="nav-item">
+                <i class="fa-regular fa-heart"></i>
+                <span>Notifications</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-plus"></i>
+                <span>Create</span>
+            </a>
+            <a href="./dashboard.html" class="nav-item">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="./profile.html" class="nav-item">
+                <img src="https://picsum.photos/id/64/150/150" alt="Profile" class="profile-thumb">
+                <span>Profile</span>
+            </a>
+        </nav>
+
+        <div class="more-menu">
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-bars"></i>
+                <span>More</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Mobile Top Header -->
+    <header class="mobile-header">
+        <span class="logo-text">Instagram</span>
+        <div class="header-icons">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-paper-plane"></i>
+        </div>
+    </header>
+
+
+    <div class="inbox-container">
+    
+    <!-- PURE CSS ROUTER: Hidden radio triggers to manage all views -->
+    <input type="radio" id="tab-primary" name="inbox-navigation" checked class="state-trigger-primary">
+    <input type="radio" id="tab-general" name="inbox-navigation" class="state-trigger-general">
+    <input type="radio" id="tab-requests" name="inbox-navigation" class="state-trigger-requests">
+
+    <!-- LEFT INBOX SIDEBAR PANEL -->
+    <aside class="inbox-sidebar">
+        
+        <!-- ================= TOP HEADER VARIATIONS ================= -->
+        <!-- Standard Header (Primary and General Tab Mode) -->
+        <div class="inbox-header standard-ui-header">
+            <div class="username-selector">
+                <span class="inbox-username">crazy_hariharan_184</span>
+                <span class="dropdown-arrow-icon">▼</span>
+            </div>
+            <button class="new-message-btn">
+                <i class="fa-regular fa-pen-to-square"></i>
+            </button>
+        </div>
+
+        <!-- Request View Header (Toggles on automatically on Requests focus) -->
+        <div class="inbox-header requests-ui-header">
+            <div class="back-navigation-wrapper">
+                <label for="tab-primary" class="back-arrow-btn">←</label>
+                <span class="inbox-username">Message requests</span>
+            </div>
+        </div>
+
+        <!-- ================= NAVIGATION STRIP ================= -->
+        <div class="inbox-tabs">
+            <label for="tab-primary" class="tab-label label-primary">Primary</label>
+            <label for="tab-general" class="tab-label label-general">General</label>
+            <label for="tab-requests" class="tab-label label-requests">Requests</label>
+        </div>
+
+        <!-- ================= SUB-BANNERS AND TOOLS ================= -->
+        <!-- Policy Banner Explainer: Only visible under Requests Mode -->
+        <div class="requests-info-banner">
+            <p>Open a chat to get more info about who's messaging you. They won't know you've seen it until you accept.</p>
+            <a href="#" class="policy-link">Decide who can message you</a>
+        </div>
+
+        <!-- Search Bar: Hidden automatically under Requests mode -->
+        <div class="search-box-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search" class="chat-search-input">
+        </div>
+
+        <!-- Horizontal Status Notes Carousel: Hidden automatically under Requests mode -->
+        <div class="notes-wrapper">
+            <div class="note-circle-item">
+                <div class="note-avatar-frame">
+                    <img src="./imagecss/aigirl.jpg" alt="My Profile">
+                    <div class="note-bubble prompt-bubble">Your turn...</div>
+                </div>
+                <span class="note-user-label">Your note</span>
+            </div>
+            
+            <div class="note-circle-item">
+                <div class="note-avatar-frame">
+                    <img src="./imagecss/festival.jpg" alt="User Note">
+                    <div class="note-bubble">🎵 Porandhan...</div>
+                </div>
+                <span class="note-user-label">_🅇🄰🄹🄰_</span>
+            </div>
+            
+            <div class="note-circle-item">
+                <div class="note-avatar-frame">
+                    <img src="./imagecss/island.jpg" alt="User Note">
+                    <div class="note-bubble">🎵 Veesum Ve...</div>
+                </div>
+                <span class="note-user-label">zaaraa💜✨</span>
+            </div>
+            <div class="note-circle-item">
+                <div class="note-avatar-frame">
+                    <img src="./imagecss/food.jpg" alt="User Note">
+                    <div class="note-bubble">🎵 Parvaithevai...</div>
+                </div>
+                <span class="note-user-label">Arthi🤣✨</span>
+            </div>
+            <div class="note-circle-item">
+                <div class="note-avatar-frame">
+                    <img src="./imagecss/emoji.jpg" alt="User Note">
+                    <div class="note-bubble">🎵 munthinam...</div>
+                </div>
+                <span class="note-user-label">vicky</span>
+            </div>
+            <div class="note-circle-item">
+                <div class="note-avatar-frame">
+                    <img src="./imagecss/Peacock2.jpg" alt="User Note">
+                    <div class="note-bubble">🎵 ela ele...</div>
+                </div>
+                <span class="note-user-label">miss you💜✨</span>
+            </div>
+            <div class="note-circle-item">
+                <div class="note-avatar-frame">
+                    <img src="./imagecss/hinata.jpg" alt="User Note">
+                    <div class="note-bubble">🎵 kalyaana...</div>
+                </div>
+                <span class="note-user-label">penni💜✨</span>
+            </div>
+        </div>
+
+        <!-- ================= SCROLLABLE CONVERSATION DRAWER ================= -->
+        <div class="conversations-list-container">
+            
+            <!-- ====== PRIMARY TAB CHAT LIST ROWS ====== -->
+            <div class="chat-row primary-list-row unread-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/dear.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">DD_love</h4>
+                    <p class="chat-row-snippet"><strong>3+ new messages</strong> <span class="bullet-divider">•</span> 39m</p>
+                </div>
+                <div class="unread-indicator-dot"></div>
+            </div>
+
+            <div class="chat-row primary-list-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/hinata.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">Arthi Kaviyarasan</h4>
+                    <p class="chat-row-snippet">You sent an attachment. <span class="bullet-divider">•</span> 1w</p>
+                </div>
+                <div class="unread-indicator-dot"></div>
+            </div>
+
+            <div class="chat-row primary-list-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/karuppu.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">Bablu 74 🌺</h4>
+                    <p class="chat-row-snippet">Bablu sent an attachment. <span class="bullet-divider">•</span> 1d</p>
+                </div>
+                <div class="unread-indicator-dot">.</div>
+            </div>
+            <div class="chat-row primary-list-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/organic.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">iyappan</h4>
+                    <p class="chat-row-snippet">3+ new messages. <span class="bullet-divider">•</span> 1d</p>
+                </div>
+                <div class="unread-indicator-dot">.</div>
+            </div>
+            <div class="chat-row primary-list-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/gift1.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">mani cm 🌺</h4>
+                    <p class="chat-row-snippet">bekry attachment. <span class="bullet-divider">•</span> 1d</p>
+                </div>
+                <div class="unread-indicator-dot">.</div>
+            </div>
+            
+
+            <!-- ====== GENERAL TAB CHAT LIST ROWS ====== -->
+            <div class="chat-row general-list-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/lion.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">Vishesh | Creative Developer <span class="verified-badge-tick">✓</span></h4>
+                    <p class="chat-row-snippet">Vishesh sent an attachment. <span class="bullet-divider">•</span> 1w</p>
+                </div>
+            </div>
+
+            <div class="chat-row general-list-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/arganic.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">Ruhi | Coding Notes</h4>
+                    <p class="chat-row-snippet">Hi! Here's the Coding Notes link 🔗 <span class="bullet-divider">•</span> 1w</p>
+                </div>
+            </div>
+
+            <div class="chat-row general-list-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/island.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">Logeshwaran <span class="verified-badge-tick">✓</span></h4>
+                    <p class="chat-row-snippet">Logeshwaran sent an attachment. <span class="bullet-divider">•</span> 2w</p>
+                </div>
+            </div>
+
+            <!-- ====== REQUESTS TAB CHAT LIST ROWS ====== -->
+            <div class="chat-row requests-list-row folder-row-link">
+                <div class="chat-avatar-wrapper hidden-req-icon-frame">👁✕</div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">Hidden Requests</h4>
+                </div>
+                <span class="chevron-arrow-indicator">❯</span>
+            </div>
+
+            <div class="chat-row requests-list-row">
+                <div class="chat-avatar-wrapper"><img src="./imagecss/mount.jpg" alt="Avatar" class="chat-row-avatar"></div>
+                <div class="chat-row-meta">
+                    <h4 class="chat-row-name">Immanuel John <span class="verified-badge-tick">✓</span></h4>
+                    <p class="chat-row-snippet">Here is the Python Library Guide... <span class="bullet-divider">•</span> 3w</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Red Delete Footer Panel: Only visible in Requests Mode -->
+        <div class="requests-bottom-footer">
+            <button class="bulk-delete-action">Delete 1</button>
+        </div>
+    </aside>
+
+    <!-- RIGHT MAIN SPLIT VIEW WINDOW PANELS -->
+    <main class="chat-view-panel">
+        
+        <!-- Standard Screen View Panel Frame (Primary/General Screen state) -->
+        <div class="empty-chat-state standard-right-pane">
+            <div class="empty-circle-icon">
+                <i class="fa-regular fa-paper-plane"></i>
+                <!-- <svg viewBox="0 0 24 24" class="paper-plane-svg"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 21L23 12L2 3v7l15 2L2 14v7z"/></svg> -->
+            </div>
+            <h3>Your messages</h3>
+            <p>Send a message to start a chat.</p>
+            <button class="send-message-cta-btn">Send message</button>
+        </div>
+
+        <!-- Requests Screen View Panel Frame (Triggered via Requests state selection) -->
+        <div class="empty-chat-state requests-right-pane">
+            <div class="empty-circle-icon text-center-icon">👤﹢</div>
+            <h3>Message requests</h3>
+            <p class="requests-disclaimer">These messages are from people you've restricted or don't follow. They won't know you viewed their request until you allow them to message you.</p>
+        </div>
+    </main>
+    
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <a href="./index.html" class="mobile-nav-item active"><i class="fa-solid fa-house"></i></a>
+        <a href="./girdreel.html" class="mobile-nav-item"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="" class="mobile-nav-item"> <i class="fa-solid fa-plus"></i></a>
+        <a href="./reel.html" class="mobile-nav-item"><i class="fa-regular fa-square-caret-right" style="background-color: white; color: black;"></i></a>
+        <a href="./profile.html" class="mobile-nav-item"><img src="https://picsum.photos/id/64/150/150" alt="Profile" class="mobile-profile-thumb"></a>
+    </nav>
+
+</div>
+
+</body>
+</html>

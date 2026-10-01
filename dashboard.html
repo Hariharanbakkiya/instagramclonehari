@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="instagram-icon.png"> -->
+    <link rel="shortcut icon" href="./instagram-icon.png.png">
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Google Fonts for system-like clean typography -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+</head>
+<body>
+ <!-- Sidebar Navigation (Desktop & Tablet) -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <a href="#" class="brand-logo">
+                <i class="fa-brands fa-instagram logo-icon"></i>
+                <span class="logo-text">Instagram</span>
+            </a>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="./index.html" class="nav-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="./reel.html" class="nav-item">
+                <i class="fa-regular fa-square-caret-right" style="background-color: white; color: black;"></i>
+                <span>Reels</span>
+            </a>
+            <a href="./like.html" class="nav-item">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Messages</span>
+            </a>
+            <a href="./girdreel.html" class="nav-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
+            </a>
+            
+            
+            <a href="#" class="nav-item">
+                <i class="fa-regular fa-heart"></i>
+                <span>Notifications</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-plus"></i>
+                <span>Create</span>
+            </a>
+            <a href="./dashboard.html" class="nav-item">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="./profile.html" class="nav-item">
+                <img src="https://picsum.photos/id/64/150/150" alt="Profile" class="profile-thumb">
+                <span>Profile</span>
+            </a>
+        </nav>
+
+        <div class="more-menu">
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-bars"></i>
+                <span>More</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Mobile Top Header -->
+    <header class="mobile-header">
+        <span class="logo-text">Instagram</span>
+        <div class="header-icons">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-paper-plane"></i>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <h1>Professional dashboard</h1>
+            <div class="tab-buttons">
+                <button class="tab-btn dropdown-btn">
+                    Insights 
+                    <span class="chevron-icon"></span>
+                </button>
+                <button class="tab-btn active-tab">Ad tools</button>
+            </div>
+        </header>
+
+        <!-- Main Layout Split -->
+        <main class="dashboard-content">
+            
+            <!-- Left Column: Manage Ads -->
+            <section class="left-column">
+                <div class="section-title-wrapper">
+                    <h2>Manage ads</h2>
+                    <span class="info-icon">i</span>
+                </div>
+                <!-- Empty state matches the screenshot layout -->
+                <div class="empty-state"></div>
+            </section>
+
+            <!-- Right Column: Ad Creation & Tools -->
+            <section class="right-column">
+                
+                <!-- Create Next Ad Group -->
+                <div class="tool-group">
+                    <h3>Create your next ad</h3>
+                    
+                    <!-- Suggested Reel Boost Box -->
+                    <div class="clickable-card">
+                        <div class="card-left">
+                            <div class="thumbnail-preview">
+                                <!-- Blue sky gradient simulating the reel thumbnail -->
+                                <div class="sky-gradient"></div> 
+                            </div>
+                            <div class="card-text">
+                                <span class="card-title">This reel is getting likes</span>
+                                <span class="card-subtitle">Try boosting it so even more people can see it.</span>
+                            </div>
+                        </div>
+                        <span class="arrow-icon"></span>
+                    </div>
+
+                    <!-- Create Ad Box -->
+                    <div class="clickable-card">
+                        <div class="card-left">
+                            <div class="icon-square">
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="card-text">
+                                <span class="card-title font-regular">Create ad</span>
+                            </div>
+                        </div>
+                        <span class="arrow-icon"></span>
+                    </div>
+                </div>
+
+                <!-- Other Tools Group -->
+                <div class="tool-group">
+                    <h3>Other tools</h3>
+                    
+                    <!-- Billing & Payments Box -->
+                    <div class="clickable-card">
+                        <div class="card-left">
+                            <div class="icon-wrapper">
+                                <!-- Replaced SVG with a purely CSS-styled credit card icon -->
+                                <div class="css-card-icon"></div>
+                            </div>
+                            <div class="card-text">
+                                <span class="card-title font-regular">Billing & payments</span>
+                            </div>
+                        </div>
+                        <span class="arrow-icon"></span>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- Replaced Floating SVG with a purely CSS-styled starburst element -->
+    <div class="floating-action-button">
+        <div class="css-burst-icon"></div>
+    </div>
+<!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <a href="./index.html" class="mobile-nav-item active"><i class="fa-solid fa-house"></i></a>
+        <a href="./girdreel.html" class="mobile-nav-item"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="" class="mobile-nav-item"> <i class="fa-solid fa-plus"></i></a>
+        <a href="./reel.html" class="mobile-nav-item"><i class="fa-regular fa-square-caret-right" style="background-color: white; color: black;"></i></a>
+        <a href="./profile.html" class="mobile-nav-item"><img src="" height="100%" width="100%" alt="" class=""></a>
+    </nav>
+
+
+</div>
+</body>
+</html>

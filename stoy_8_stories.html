@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Instagram</title>
+
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="instagram-icon.png"> -->
+    <link rel="shortcut icon" href="./instagram-icon.png.png">
+    <link rel="stylesheet" href="story_8_stories.css">
+    <!-- Google Fonts for Typography Replication -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PURE CSS CAROUSEL STATE REGISTRY -->
+    <input type="radio" name="story-state" id="view-story-1" checked hidden>
+    <input type="radio" name="story-state" id="view-story-2" hidden>
+    <input type="radio" name="story-state" id="view-story-3" hidden>
+    <input type="radio" name="story-state" id="view-story-4" hidden>
+    <input type="radio" name="story-state" id="view-story-5" hidden>
+    <input type="radio" name="story-state" id="view-story-6" hidden>
+    <input type="radio" name="story-state" id="view-story-7" hidden>
+    <input type="radio" name="story-state" id="view-story-8" hidden>
+    <div class="story-viewer-container">
+        
+        <!-- 🔝 GLOBAL HEADER -->
+        <header class="global-header">
+            <div class="logo">Instagram</div>
+            <button class="close-btn" aria-label="Close Viewer">
+                <!-- <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> -->
+            </button>
+        </header>
+
+        <!-- 🎭 SLIDING / 3D CUBE STAGE ENVIRONMENT -->
+        <div class="carousel-stage-window">
+            <div class="carousel-track">
+                
+
+                <!-- ==================== STORY CARD 1 ==================== -->
+                <div class="story-card card-index-1">
+                    <video class="card-video-bg" width="100%" height="100%" controls autoplay muted loop playsinline  controlsList="nodownload nopictureinpicture noplaybackspeed nofullscreen">
+                        <source src="./videos/video_09.mp4" type="video/mp4">
+                   </video>
+                    <div class="video-overlay-shading"></div>
+                    <div class="progress-bar-container"><div class="progress-segment active-run-1"></div></div>
+
+                    <div class="story-header">
+                        <div class="user-meta">
+                            <div class="profile-avatar border-gradient"><img src="./imagecss/bear.jpg" alt="" height="100%" width="100%" style="border-radius: 50%;"></div>
+                            <div class="user-details">
+                                <span class="username">yuva_sri.08</span>
+                                <span class="timestamp">9h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-body">
+                        <div class="text-sticker-layer">
+                            <!-- <p class="greeting-heading">✨Advance happy b'dayyy Myyyy Dear 🫂❤️🎉</p> -->
+                            <!-- <p class="mention-tag">@itx_abhi_xo</p> -->
+                        </div>
+                    </div>
+
+                    <label for="view-story-2" class="nav-trigger-overlay next-trigger"></label>
+                    <div class="story-footer"><div class="reply-input-box">
+                        <input type="text" placeholder="Reply to yuva_sri.08..." >
+                    </div></div>
+                </div>
+
+                <!-- ==================== STORY CARD 2 ==================== -->
+                <div class="story-card card-index-2">
+                    <video class="card-video-bg" width="100%" height="100%" controls autoplay muted loop playsinline  controlsList="nodownload nopictureinpicture noplaybackspeed nofullscreen">
+                        <source src="./videos/video_09.mp4" type="video/mp4">
+                    </video>    
+                    <div class="video-overlay-shading"></div>
+                    <div class="progress-bar-container"><div class="progress-segment active-run-2"></div></div>
+
+                    <div class="story-header"><div class="user-meta">
+                        <div class="profile-avatar border-gradient"><img src="./imagecss/arganic.jpg" alt="" height="100%" width="100%" style="border-radius: 50%;"></div>
+                        <div class="user-details"><span class="username">abar_black_lover1220</span><span class="timestamp">6h</span></div>
+                    </div></div>
+
+                    <div class="media-body"><div class="text-sticker-layer">
+                        <!-- <p class="greeting-heading">Out tonight! 100% Black 🌃🔥</p> -->
+                    </div></div>
+
+                    <label for="view-story-1" class="nav-trigger-overlay prev-trigger"></label>
+                    <label for="view-story-3" class="nav-trigger-overlay next-trigger"></label>
+                    <div class="story-footer"><div class="reply-input-box">
+                        <input type="text" placeholder="Reply to abar_black_lover1220...">
+                    </div></div>
+                </div>
+
+                <!-- ==================== STORY CARD 3 ==================== -->
+                <div class="story-card card-index-3">
+                    <video class="card-video-bg" src="./videos/video_21.mp4" autoplay muted loop playsinline></video>
+                    <div class="video-overlay-shading"></div>
+                    <div class="progress-bar-container"><div class="progress-segment active-run-3"></div></div>
+
+                    <div class="story-header"><div class="user-meta">
+                        <div class="profile-avatar border-gradient"><img src="./imagecss/gift.jpg" alt="" height="100%" width="100%" style="border-radius: 50%;"></div>
+                        <div class="user-details"><span class="username">chocow_gxrl_5</span><span class="timestamp">6h</span></div>
+                    </div></div>
+
+                    <div class="media-body"><div class="text-sticker-layer">
+                        <!-- <p class="greeting-heading">Weekend mood ✨🖤</p> -->
+                    </div></div>
+
+                    <label for="view-story-2" class="nav-trigger-overlay prev-trigger"></label>
+                    <label for="view-story-4" class="nav-trigger-overlay next-trigger"></label>
+                    <div class="story-footer"><div class="reply-input-box">
+                        <input type="text" placeholder="Reply to chocow_gxrl_5..." disabled>
+                    </div></div>
+                </div>
+
+                <!-- ==================== STORY CARD 4 ==================== -->
+                <div class="story-card card-index-4">
+                    <video class="card-video-bg" src="./videos/video_02.mp4" autoplay muted loop playsinline></video>
+                    <div class="video-overlay-shading"></div>
+                    <div class="progress-bar-container"><div class="progress-segment active-run-4"></div></div>
+
+                    <div class="story-header"><div class="user-meta">
+                        <div class="profile-avatar border-gradient"><img src="./imagecss/food.jpg" alt="" height="100%" width="100%" style="border-radius: 50%;"></div>
+                        <div class="user-details"><span class="username">nature_vibes</span><span class="timestamp">10h</span></div>
+                    </div></div>
+
+                    <div class="media-body"><div class="text-sticker-layer">
+                        <!-- <p class="greeting-heading">Nature walk and relaxing vibes 🌲✨</p> -->
+                    </div></div>
+
+                    <label for="view-story-3" class="nav-trigger-overlay prev-trigger"></label>
+                    <label for="view-story-5" class="nav-trigger-overlay next-trigger"></label>
+                    <div class="story-footer"><div class="reply-input-box">
+                        <input type="text" placeholder="Reply to nature_vibes..." disabled>
+                    </div></div>
+                </div>
+
+                <!-- ==================== STORY CARD 5 ==================== -->
+                <div class="story-card card-index-5">
+                    <video class="card-video-bg" src="./videos/video_06.mp4" autoplay muted loop playsinline></video>
+                    <div class="video-overlay-shading"></div>
+                    <div class="progress-bar-container"><div class="progress-segment active-run-5"></div></div>
+
+                    <div class="story-header"><div class="user-meta">
+                        <div class="profile-avatar border-gradient"><img src="./imagecss/hinata.jpg" alt="" height="100%" width="100%" style="border-radius: 50%;"></div>
+                        <div class="user-details"><span class="username">travel_diary_05</span><span class="timestamp">8h</span></div>
+                    </div></div>
+
+                    <div class="media-body"><div class="text-sticker-layer">
+                        <!-- <p class="greeting-heading">Travel mode ON ✈️🌍</p> -->
+                    </div></div>
+
+                    <label for="view-story-4" class="nav-trigger-overlay prev-trigger"></label>
+                    <label for="view-story-6" class="nav-trigger-overlay next-trigger"></label>
+                    <div class="story-footer"><div class="reply-input-box">
+                        <input type="text" placeholder="Reply to travel_diary_05..." disabled>
+                    </div></div>
+                </div>
+
+                <!-- ==================== STORY CARD 6 ==================== -->
+                <div class="story-card card-index-6">
+                    <video class="card-video-bg" src="./videos/video_12.mp4" autoplay muted loop playsinline></video>
+                    <div class="video-overlay-shading"></div>
+                    <div class="progress-bar-container"><div class="progress-segment active-run-6"></div></div>
+
+                    <div class="story-header"><div class="user-meta">
+                        <div class="profile-avatar border-gradient"><img src="./imagecss/lion.jpg" alt="" height="100%" width="100%" style="border-radius: 50%;"></div>
+                        <div class="user-details"><span class="username">daily_moments</span><span class="timestamp">5h</span></div>
+                    </div></div>
+
+                    <div class="media-body"><div class="text-sticker-layer">
+                        <!-- <p class="greeting-heading">Good vibes only ☀️💫</p> -->
+                    </div></div>
+
+                    <label for="view-story-5" class="nav-trigger-overlay prev-trigger"></label>
+                    <label for="view-story-7" class="nav-trigger-overlay next-trigger"></label>
+                    <div class="story-footer"><div class="reply-input-box">
+                        <input type="text" placeholder="Reply to daily_moments..." disabled>
+                    </div></div>
+                </div>
+
+                <!-- ==================== STORY CARD 7 ==================== -->
+                <div class="story-card card-index-7">
+                    <video class="card-video-bg" src="./videos/video_18.mp4" autoplay muted loop playsinline></video>
+                    <div class="video-overlay-shading"></div>
+                    <div class="progress-bar-container"><div class="progress-segment active-run-7"></div></div>
+
+                    <div class="story-header"><div class="user-meta">
+                        <div class="profile-avatar border-gradient"><img src="./imagecss/Peacock2.jpg" alt="" height="100%" width="100%" style="border-radius: 50%;"></div>
+                        <div class="user-details"><span class="username">music_night_07</span><span class="timestamp">3h</span></div>
+                    </div></div>
+
+                    <div class="media-body"><div class="text-sticker-layer">
+                        <!-- <p class="greeting-heading">Music + Night = Perfect 🎧🌙</p> -->
+                    </div></div>
+
+                    <label for="view-story-6" class="nav-trigger-overlay prev-trigger"></label>
+                    <label for="view-story-8" class="nav-trigger-overlay next-trigger"></label>
+                    <div class="story-footer"><div class="reply-input-box">
+                        <input type="text" placeholder="Reply to music_night_07..." disabled>
+                    </div></div>
+                </div>
+
+                <!-- ==================== STORY CARD 8 ==================== -->
+                <div class="story-card card-index-8">
+                    <video class="card-video-bg" autoplay muted playsinline controls>
+                      <source src="./videos/video_20.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay-shading"></div>
+                    <div class="progress-bar-container"><div class="progress-segment active-run-8"></div></div>
+
+                    <div class="story-header"><div class="user-meta">
+                        <div class="profile-avatar border-gradient"><img src="./imagecss/zeepra.jpg" alt="" height="100%" width="100%" style="border-radius: 50%;"></div>
+                        <div class="user-details"><span class="username">happy_days_08</span><span class="timestamp">1h</span></div>
+                    </div></div>
+
+                    <div class="media-body"><div class="text-sticker-layer">
+                        <!-- <p class="greeting-heading">Make today memorable ❤️✨</p> -->
+                    </div></div>
+
+                    <label for="view-story-7" class="nav-trigger-overlay prev-trigger"></label>
+                    <label for="view-story-1" class="nav-trigger-overlay next-trigger"></label>
+                    <div class="story-footer"><div class="reply-input-box">
+                        <input type="text" placeholder="Reply to happy_days_08..." disabled>
+                    </div></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- DESKTOP STORY NAVIGATION -->
+        <div class="arrow-controls-layer">
+            <label for="view-story-8" id="btn-prev-to-8" class="nav-arrow prev-arrow"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></label>
+            <label for="view-story-1" id="btn-prev-to-1" class="nav-arrow prev-arrow"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></label>
+            <label for="view-story-2" id="btn-prev-to-2" class="nav-arrow prev-arrow"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></label>
+            <label for="view-story-3" id="btn-prev-to-3" class="nav-arrow prev-arrow"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></label>
+            <label for="view-story-4" id="btn-prev-to-4" class="nav-arrow prev-arrow"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></label>
+            <label for="view-story-5" id="btn-prev-to-5" class="nav-arrow prev-arrow"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></label>
+            <label for="view-story-6" id="btn-prev-to-6" class="nav-arrow prev-arrow"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></label>
+            <label for="view-story-7" id="btn-prev-to-7" class="nav-arrow prev-arrow"><svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></label>
+
+            <label for="view-story-2" id="btn-next-to-2" class="nav-arrow next-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></label>
+            <label for="view-story-3" id="btn-next-to-3" class="nav-arrow next-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></label>
+            <label for="view-story-4" id="btn-next-to-4" class="nav-arrow next-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></label>
+            <label for="view-story-5" id="btn-next-to-5" class="nav-arrow next-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></label>
+            <label for="view-story-6" id="btn-next-to-6" class="nav-arrow next-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></label>
+            <label for="view-story-7" id="btn-next-to-7" class="nav-arrow next-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></label>
+            <label for="view-story-8" id="btn-next-to-8" class="nav-arrow next-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></label>
+            <label for="view-story-1" id="btn-next-to-1" class="nav-arrow next-arrow"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></label>
+        </div>
+
+        <!-- LOWER STORY NAVIGATION -->
+        <div class="bottom-preview-deck">
+            <label for="view-story-1" class="deck-thumb thumb-1"><div class="avatar-dot"></div><span>yuva_sri.08</span></label>
+            <label for="view-story-2" class="deck-thumb thumb-2"><div class="avatar-dot"></div><span>abar_black...</span></label>
+            <label for="view-story-3" class="deck-thumb thumb-3"><div class="avatar-dot"></div><span>chocow_gxrl_5</span></label>
+            <label for="view-story-4" class="deck-thumb thumb-4"><div class="avatar-dot"></div><span>nature_vibes</span></label>
+            <label for="view-story-5" class="deck-thumb thumb-5"><div class="avatar-dot"></div><span>travel_diary</span></label>
+            <label for="view-story-6" class="deck-thumb thumb-6"><div class="avatar-dot"></div><span>daily_moments</span></label>
+            <label for="view-story-7" class="deck-thumb thumb-7"><div class="avatar-dot"></div><span>music_night</span></label>
+            <label for="view-story-8" class="deck-thumb thumb-8"><div class="avatar-dot"></div><span>happy_days</span></label>
+        </div>
+
+    </div>
+
+</body>
+</html>

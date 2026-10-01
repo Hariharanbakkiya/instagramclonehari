@@ -1,0 +1,623 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+/* --- SIDEBAR NAVIGATION (Desktop) --- */
+.sidebar {
+    width:60px;
+    height: 100vh;
+    /* box-shadow:0px -1px 2px #a8a8a8; */
+    /* border-right: 1px solid #262626; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 24px 12px 20px 12px;
+    z-index: 1000;
+    background-color: #ffffff;
+    color: black;
+}
+
+.logo-container {
+    padding: 12px 12px 30px 12px;
+}
+
+.brand-logo {
+    color: #000000;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    gap:18px;
+    align-items: center;
+}
+
+.logo-icon {
+    display: none;
+    font-size: 24px;
+}
+
+.logo-text {
+    font-family: 'Grand Hotel', cursive, sans-serif;
+    font-size: 26px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    padding: 12px;
+    color: #000000;
+    text-decoration: none;
+    font-size:16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar:hover{
+    width:230px;
+    transition-duration:0.1s;
+}
+.nav-item:hover {
+    background-color:rgba(189, 187, 187, 0.3);
+}
+
+.nav-item i {
+    font-size: 24px;
+    width: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.nav-item.active {
+    font-weight: bold;
+}
+.more-menu{
+padding-bottom: 20px;
+}
+.profile-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* --- MOBILE TOP HEADER & BOTTOM NAV --- */ 
+.mobile-header, .mobile-bottom-nav {
+    display: none;
+}
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+}
+/* ==========================================================================
+   CSS CORE ARCHITECTURE & STATE ROUTER REGULATION
+   ========================================================================== */
+
+/* Completely hide radio buttons away from visual design interface */
+.state-trigger-primary,
+.state-trigger-general,
+.state-trigger-requests {
+    display: none !important;
+}
+
+/* Hide target component content viewframes cleanly by default setup definitions */
+.requests-ui-header,
+.requests-info-banner,
+.requests-bottom-footer,
+.general-list-row,
+.requests-list-row,
+.requests-right-pane {
+    display: none !important;
+}
+
+/* --- STATE 1 ROUTING SYSTEM RULES: PRIMARY ACTIVE --- */
+.state-trigger-primary:checked ~ .inbox-sidebar .label-primary {
+    color: #000000;
+    border-bottom: 1.5px solid #000000;
+}
+.state-trigger-primary:checked ~ .inbox-sidebar .primary-list-row {
+    display: flex !important;
+}
+
+/* --- STATE 2 ROUTING SYSTEM RULES: GENERAL ACTIVE --- */
+.state-trigger-general:checked ~ .inbox-sidebar .label-general {
+    color: #000000;
+    border-bottom: 1.5px solid #000000;
+}
+.state-trigger-general:checked ~ .inbox-sidebar .general-list-row {
+    display: flex !important;
+}
+
+/* --- STATE 3 ROUTING SYSTEM RULES: REQUESTS ACTIVE --- */
+.state-trigger-requests:checked ~ .inbox-sidebar .label-requests {
+    color: #000000;
+    border-bottom: 1.5px solid #000000;
+}
+/* Swap component modules seamlessly on the sidebar frame */
+.state-trigger-requests:checked ~ .inbox-sidebar .standard-ui-header,
+.state-trigger-requests:checked ~ .inbox-sidebar .inbox-tabs,
+.state-trigger-requests:checked ~ .inbox-sidebar .search-box-container,
+.state-trigger-requests:checked ~ .inbox-sidebar .notes-wrapper,
+.state-trigger-requests:checked ~ .chat-view-panel .standard-right-pane {
+    display: none !important;
+}
+.state-trigger-requests:checked ~ .inbox-sidebar .requests-ui-header,
+.state-trigger-requests:checked ~ .inbox-sidebar .requests-info-banner,
+.state-trigger-requests:checked ~ .inbox-sidebar .requests-list-row,
+.state-trigger-requests:checked ~ .inbox-sidebar .requests-bottom-footer,
+.state-trigger-requests:checked ~ .chat-view-panel .requests-right-pane {
+    display: flex !important;
+}
+
+
+/* ==========================================================================
+   COMPONENT STYLING & HOVER INTERACTIVITY
+   ========================================================================== */
+.inbox-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.inbox-sidebar {
+    margin-left:80px;
+    width:450px;
+    height: 100%;
+    border-right: 1px solid #efefef;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.chat-view-panel {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Blocks Spacing Layout */
+.inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 10px 20px;
+    height: 62px;
+}
+
+.username-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.inbox-username {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.dropdown-arrow-icon {
+    font-size: 10px;
+    color: #000000;
+}
+
+/* Interactive Menu Labels Navigation Block Bar */
+.inbox-tabs {
+    display: flex;
+    border-bottom: 1px solid #efefef;
+    padding: 0 10px;
+}
+
+.tab-label {
+    flex: 1;
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #737373;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 1.5px solid transparent;
+    transition: color 0.15s ease;
+}
+
+.tab-label:hover {
+    color: #000000;
+}
+
+/* Search Box Container Field layout rules */
+.search-box-container {
+    position: relative;
+    padding: 14px 20px 8px 20px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 32px;
+    top: 52%;
+    transform: translateY(-50%);
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.chat-search-input {
+    width: 100%;
+    background-color: #efefef;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 12px 10px 38px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Horizontal Status Circular Carousels Wrapper Layouts */
+.notes-wrapper {
+    display: flex;
+    gap: 16px;
+    padding:14px 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.note-circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 72px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.note-avatar-frame {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+}
+
+.note-avatar-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.note-bubble {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 9px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.prompt-bubble {
+    color: #737373;
+    border-style: dashed;
+}
+
+.note-user-label {
+    font-size: 11px;
+    color: #737373;
+}
+
+/* Vertical Chats Display Row Components + Hover Animations */
+.conversations-list-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.chat-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.chat-row:hover {
+    background-color: #fafafa;
+    transform: translateX(3px); /* Smooth layout shift effect */
+}
+
+.chat-avatar-wrapper {
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+
+.chat-row-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-row-meta {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.chat-row-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 3px;
+}
+
+.chat-row-snippet {
+    font-size: 13px;
+    color: #737373;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bullet-divider {
+    padding: 0 2px;
+}
+
+.unread-indicator-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #0095f6; /* Instantly identifies new notifications */
+    border-radius: 50%;
+    margin-left: 10px;
+    flex-shrink: 0;
+    display: none;
+}
+
+.unread-row .unread-indicator-dot {
+    display: block;
+}
+
+/* Verified Blue Tick Badges markup styles */
+.verified-badge-tick {
+    background-color: #0095f6;
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 1px 4px;
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+/* ==========================================================================
+   REQUESTS MODE LAYER ADDITIONS
+   ========================================================================== */
+.back-navigation-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.back-arrow-btn {
+    font-size: 22px;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+
+.requests-info-banner {
+    flex-direction: column;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: #737373;
+    line-height: 1.4;
+    border-bottom: 1px solid #efefef;
+}
+
+.policy-link {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.hidden-req-icon-frame {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.chevron-arrow-indicator {
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+.requests-bottom-footer {
+    border-top: 1px solid #efefef;
+    padding: 16px;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.bulk-delete-action {
+    background: none;
+    border: none;
+    color: #ed4956;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   RIGHT PANE EMPTY STATUS BOARD DESIGNS
+   ========================================================================== */
+.empty-chat-state {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 380px;
+    padding: 20px;
+}
+
+.empty-circle-icon {
+    width: 96px;
+    height: 96px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    margin-left: 40px;
+}
+
+.text-center-icon {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.empty-circle-icon i{
+    font-size:37px;
+    margin-right: 4px;
+    margin-top: 3px;
+    /* transform: rotate(-10deg) translate(-10px, 2px); */
+}
+
+.empty-chat-state h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.empty-chat-state p {
+    font-size: 14px;
+    color: #737373;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.send-message-cta-btn {
+    background-color: #0095f6;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.send-message-cta-btn:hover {
+    background-color: #1877f2;
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+/* Extra Small (xs: <576px) */
+@media (max-width: 575.98px) {
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-header, .mobile-bottom-nav {
+    display: flex;
+  }
+   .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 26px;
+        border-bottom: 1px solid #262626;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height:50px;
+        background-color: #000;
+        z-index: 1000;
+        color: white;
+        /* opacity: 0.0; */
+    }
+
+    .header-icons {
+        display: flex;
+        gap: 18px;
+        font-size: 20px;
+    }
+     .notes-wrapper{
+        width: 90%;
+        height: 150px;
+     }
+    /* .main-container {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 70px;
+    } */
+
+    .mobile-bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #000;
+        border-top: 1px solid #262626;
+        z-index: 1000;
+    }
+
+    .mobile-nav-item {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .mobile-profile-thumb {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+  .inbox-sidebar {
+    margin-top: 40px;
+    margin-left: 0;
+    width: 100%;
+    height: calc(100vh - 100px); /* account for header + bottom nav */
+    overflow-y: auto; /* allow scrolling */
+  }
+  .conversations-list-container {
+    margin: auto;
+    width: 95%;
+    max-height: calc(100vh - 160px); /* keep within viewport */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
+  }
+
+  /* restore scrollbars only for conversations list */
+  .conversations-list-container::-webkit-scrollbar {
+    display: none; /* hide scrollbar but keep scroll functional */
+  }
+
+  .chat-view-panel {
+    display: none; /* hide right pane on xs */
+  }
+}
